@@ -1,0 +1,126 @@
+@import "_normalize";
+@import "_variables";
+
+html {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background: rgb(201, 190, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(201, 190, 98, 0.6166841736694677) 0%,
+    rgba(37, 166, 176, 0.258140756302521) 46%
+  );
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.monday {
+  color: aqua;
+}
+
+.tuesday {
+  color: darkmagenta;
+}
+
+.wednesday {
+  color: crimson;
+}
+
+.thursday {
+  color: chocolate;
+}
+
+.friday {
+  color: cadetblue;
+}
+
+.header__title {
+  color: rgb(85, 132, 179);
+  line-height: 48px;
+}
+.about {
+  &__image {
+    width: 100%;
+    max-width: 150px;
+    display: block;
+    float: left;
+    margin: 0 16px 16px 0;
+  }
+  &__paragraph {
+    color: #173753;
+    padding-left: 10px;
+  }
+  &__title {
+    color: #247ba0;
+  }
+}
+.diary {
+  &__title {
+    color: #247ba0;
+    clear: both;
+  }
+  &__teaching,
+  &__sport,
+  &__relationships,
+  &__travel {
+    color: #3f4739;
+  }
+}
+.footer {
+  color: #173753;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+.navigation {
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    text-decoration: none;
+    margin-right: 30px;
+  }
+  @media (min-width: 651px) {
+    &__button {
+      display: none;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .navigation {
+    &__button {
+      border: none;
+      background: none;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+    }
+    &__list {
+      flex-direction: column;
+      display: none;
+      &--visible {
+        display: flex;
+        padding-left: 30px;
+      }
+    }
+  }
+}
